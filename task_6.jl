@@ -2,16 +2,9 @@
 Дано: На ограниченном внешней прямоугольной рамкой поле имеется ровно одна внутренняя перегородка в форме прямоугольника. Робот -в произвольной клетке поля между внешней и внутренней перегородками. 
 Результат: Робот -в исходном положении и по всему периметру внутренней перегородки поставлены маркеры. 
 =#
+using HorizonSideRobots
+r = Robot(animate=true)
 
-include("roblib.jl")
-    #=
-        invers(side::HorizonSide)
-        movements!(r::Robot,side::HorizonSide,num_steps::Int)
-        get_num_steps_movements!(r::Robot, side::HorizonSide)
-        movements!(r::Robot,side::HorizonSide)
-        moves!(r::Robot,side::HorizonSide)
-        find_border!(r::Robot,direction_to_border::HorizonSide, direction_of_movement::HorizonSide)
-    =#
 
 function mark_from_perimetr(r::Robot)
     steps_up = moves!(r,Nord) 
